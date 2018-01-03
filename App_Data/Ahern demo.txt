@@ -1,0 +1,117 @@
+HR Use Case 
+    Full time, part time (doesn't matter)
+    Driver, non-driver 
+    Nevada, California
+
+DocuSign: 
+     SSN Masked field
+     Fields that are filled once need to be filled in all documents 
+
+
+Full time, in california and driver, need to upload documents 
+
+Doc Visibilty would be nice to show but not needed for demo 
+
+
+Who needs to be involved: 
+	HR rep kicking off process - intelledox part 
+        Candidate - 
+	Branch manager - signer/initial at end of process 
+
+
+Employee offer and On-Boarding is the name of project 
+
+different documents are in envelope based on stock options radio buttons
+
+
+All candidates see:
+1. W4
+2. confidentiality agreement
+
+If candidate lives in NV
+1. Nevada handbook
+
+if Candidate lives in Ca
+1. State withholding certificate 
+
+
+AA Ticket Info 
+1. Travel has to be completed by Jan 21st 2018
+2. Any travel 20K miles domestically from any city 
+3. 0012110662019 (ticket #)
+
+Orthodontists -
+----------------
+Dr Schrader in southlake
+
+Johnson and collins town square 
+
+961734721 (member ID)
+00069-00010 (group id)
+
+092941 Plan # MAGICPARADIG
+
+---------------------------------------------
+risk noted in risk register 
+Network diagram 
+
+
+UID: magicparadigm4
+pwd: docusign4
+
+integrator key: 
+1db1a3dd-8174-4281-a2e5-3483a20a34de
+
+secret key: 
+a8bdad88-e98f-48bc-9e3f-5b7d8ea47803
+
+public key:
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArTqlpgdtfVklJ9CY5Bdo
+jqcIPvtiVTVhkugLj5RIwwPMLp4XU+6SVZ+eG3ZDiKDbNWuaLWcaKfNFWBzcuhX/
+tC6VdYiakntaWmxu7F6sx63eyvRqHOtknEv1K6378jyQ21fxOZcDJhldaf/VtiSC
+1QIQj4ehQZOIpmbvFXEo26aMjp0V6GPEe5D5GAORQzKU+hzgWTaHJ8QXlVhtb8W0
+z9OUtK2NdRAQU4AVFL1+pvbLfjTfHlEKhH556mObTZjBDh4+0sJ/Iz/dP4/aZZzx
+dkeOJZB1bcSEmY5rNeOvz+Hw6c8/uKBrllDSzVSp/C1pf8mCXCR80A/Lq4DK4FMq
+swIDAQAB
+-----END PUBLIC KEY-----
+
+
+private key:
+-----BEGIN RSA PRIVATE KEY-----
+MIIEowIBAAKCAQEArTqlpgdtfVklJ9CY5BdojqcIPvtiVTVhkugLj5RIwwPMLp4X
+U+6SVZ+eG3ZDiKDbNWuaLWcaKfNFWBzcuhX/tC6VdYiakntaWmxu7F6sx63eyvRq
+HOtknEv1K6378jyQ21fxOZcDJhldaf/VtiSC1QIQj4ehQZOIpmbvFXEo26aMjp0V
+6GPEe5D5GAORQzKU+hzgWTaHJ8QXlVhtb8W0z9OUtK2NdRAQU4AVFL1+pvbLfjTf
+HlEKhH556mObTZjBDh4+0sJ/Iz/dP4/aZZzxdkeOJZB1bcSEmY5rNeOvz+Hw6c8/
+uKBrllDSzVSp/C1pf8mCXCR80A/Lq4DK4FMqswIDAQABAoIBAEES1eU/xw6ebUm+
+n6CXdoyYDI30SyUtL2FLUAR4tLildY9RjfvWlBwcIP25+Habzp0Ltdg2cequWy9V
+cElrOCpMkZKcZUx/kBqFv0mF6yv7kcT1+eKxPpNEKW5mJk4CGHx9Vb3Hj8RBJQlL
+tNF+d7Ni2ivAzH/g1yWDZ27LmoigMrPgD1iaNRNHGwOxqNqAibljaPf44BNc8SwK
+AjZ1bhFgFM/MQ17r3NPO/AV4ya9Tq2HwUvnaZ1y8Gj+X3iuYfgg4NsWuRpfTCpjU
+zg/4iiV54/i1dVmCEmjRiWfEH4/Q1A67dWZq++cfruCKEKExlju7kmlgSU6QSYCd
+V+bJOCkCgYEA25zUWVVj9BR1KXDiQK7hwcxiwPJehSuBkOJ92NupewMLYID3AG/b
+die6tEB1ZjXC615BLS+1jBCDE2HAk2GUQ5bO6hlI5/9Eo4fQcmOyRhkiewHjcN3X
+iJKsqEjP+VnmKl9ShV86YaKp08lLuCfl7Pjg41DM35H5gr2upZEL+tUCgYEAye5l
+jb41pntCTaHnMSdLR7m4ZI7ZLADNxuYlyjgrsXezP8GG1JylevKiI7vDlgtN5+gt
+dZ57tB495iBMH3rlZGNPofHVjTgofvu6jSHivpnRzJRZZzErotnIxYXF6G/C2wp6
+Bd/mGmap6wm5N8GZ8R8qRpXFFQ4ngQpIeZktw2cCgYEA1UF9kyIwZZxYCV3s1xL7
+ds2aN/Mjhf2xW5gUzLjB4woZyiRxtqLoYdxCmTbeydn65cQpVk+148VFA1UxQ+zF
+pLyVQQ48lcx0Qrhn2iyluRw/N2OmELvbyGtl7iSGkIST1SGraIgIkTb74wTd2n4j
+7/Hdr9+OkquVtzeqmGw5TeECgYAa3WOXYvniRz2/9E08xdyHE1dL0ZFlAEpgLthS
+OfzeJG2tisK0YI7Hd6ZImL9ho+ledA4wOsB8axWTGzLlcUU5gNjkU7c0jYcdtcHQ
+6vQupWo7DHWEfA8xIEZMuQpmbRAAcjlftLT5SDVM9sM0fsZLRPkr4NsSfQqWaVbR
+Dqb++wKBgBu8qBJepT51BehFxx7Y/FeXqxPg80xz6L5BCPB5PtxUaV8CdwbumCRG
+V6DDEhGDH3IX7AwQ/EVZeN245CsPJ/rVSHDAy19wLClWEYpx9sTJaSpNIMhJ5YTL
+BZ2lLNFJkSYNE01J4MFvFhALU6vGS8RHDqeJ5z8wZV4G92+jq549
+-----END RSA PRIVATE KEY-----
+
+
+
+https://account-d.docusign.com/oauth/auth?response_type=code&scope=signature%20impersonation&client_id=1db1a3dd-8174-4281-a2e5-3483a20a34de&redirect_uri=http://sedemo1.cloudapp.net/AdvancedFormsFields2017/demos/default.aspx
+
+
+http://sedemo1.cloudapp.net/AdvancedFormsFields2017/demos/default.aspx?code=eyJ0eXAiOiJNVCIsImFsZyI6IlJTMjU2Iiwia2lkIjoiNjgxODVmZjEtNGU1MS00Y2U5LWFmMWMtNjg5ODEyMjAzMzE3In0.AQkAAAABAAYABwAAiaOanDbVSAgAABUq4pw21UgCAJJ0JvjsV8pCj6j6vyxHlk4NACQAAAAxZGIxYTNkZC04MTc0LTQyODEtYTJlNS0zNDgzYTIwYTM0ZGUVAAEAAAASAAAAAAAYAAIAAAAFAAAAHQAAACAAgFgD6Zk21Ug.A7cuoPzxvLsF9fiVJZ-zUHhWZSE55A5xxqaoip8BBQCoyzGv6EeppSMQn9i9X41MASks2AcLQv81Ao4bM22h5fZq7TznXqgMq6vKP0yaUAvWKZ-aGxoLWxpPaKnnFcjwcgYvnaFLfA3w1yFTdbFSxzCEtHbkCno_w6mJWT7HXSF3X8wwOlXD59A51lnBJ845pju1HASLWI9wAtZzyFy9z8VF-BmhYGsHITBE-6kDhSarJduIUdQDTPWH2LEOUlwAYhBa1zbY9E3fmGtkqtGMtR9-TtCBvKxojrxv3pJP6tr8ryqn6bN8WR1TWyOyikSKBb1FuUxEixHz95U9h_BzpQ
+
+
+code=eyJ0eXAiOiJNVCIsImFsZyI6IlJTMjU2Iiwia2lkIjoiNjgxODVmZjEtNGU1MS00Y2U5LWFmMWMtNjg5ODEyMjAzMzE3In0.AQkAAAABAAYABwAAiaOanDbVSAgAABUq4pw21UgCAJJ0JvjsV8pCj6j6vyxHlk4NACQAAAAxZGIxYTNkZC04MTc0LTQyODEtYTJlNS0zNDgzYTIwYTM0ZGUVAAEAAAASAAAAAAAYAAIAAAAFAAAAHQAAACAAgFgD6Zk21Ug.A7cuoPzxvLsF9fiVJZ-zUHhWZSE55A5xxqaoip8BBQCoyzGv6EeppSMQn9i9X41MASks2AcLQv81Ao4bM22h5fZq7TznXqgMq6vKP0yaUAvWKZ-aGxoLWxpPaKnnFcjwcgYvnaFLfA3w1yFTdbFSxzCEtHbkCno_w6mJWT7HXSF3X8wwOlXD59A51lnBJ845pju1HASLWI9wAtZzyFy9z8VF-BmhYGsHITBE-6kDhSarJduIUdQDTPWH2LEOUlwAYhBa1zbY9E3fmGtkqtGMtR9-TtCBvKxojrxv3pJP6tr8ryqn6bN8WR1TWyOyikSKBb1FuUxEixHz95U9h_BzpQ
