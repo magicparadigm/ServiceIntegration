@@ -32,6 +32,10 @@
         <div class="col-xs-12">
             <h2>Primary Account Holder</h2>
             <div class="form-group">
+                <label for="accountlist">Account</label>
+                <select id="accounts" runat="server" class="form-control"></select>
+            </div>
+            <div class="form-group">
                 <label for="firstname">First Name</label>
                 <input type="text" runat="server" class="form-control" id="firstname" placeholder="">
             </div>

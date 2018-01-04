@@ -73,6 +73,8 @@ public partial class ServiceIntegration : System.Web.UI.Page
         primarySignerSection.Visible = true;
         templates.Visible = true;
         button2.Visible = true;
+
+        loadAccounts();
         
     }
 
@@ -92,7 +94,10 @@ public partial class ServiceIntegration : System.Web.UI.Page
             if ((!Session["dsTokenExpire"].Equals("") && (!Session["dsJWT"].Equals(""))))
             {
                 dsExpire = (DateTime)Session["dstokenExpire"];
-                if (DateTime.Now.Ticks < (0.75 * dsExpire.Ticks))
+
+                // Check to make sure that the token has more than 30 minutes before it expires. If it does, use the cached token, if not, create a new one
+                System.TimeSpan remainingTime = dsExpire.Subtract(DateTime.Now);
+                if (remainingTime.Minutes > 30)
                 {
                     return Session["dsJWT"].ToString();
                 }
@@ -101,8 +106,6 @@ public partial class ServiceIntegration : System.Web.UI.Page
 
         RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
         rsa = DecodeRSAPrivateKey(FromBase64Url(pKey.Value));
-
-        var bytes = rsa.ExportCspBlob(false);
 
         Microsoft.IdentityModel.Tokens.RsaSecurityKey _signingKey = new Microsoft.IdentityModel.Tokens.RsaSecurityKey(rsa);
         Microsoft.IdentityModel.Tokens.SigningCredentials signingCredentials =  new Microsoft.IdentityModel.Tokens.SigningCredentials(_signingKey, Microsoft.IdentityModel.Tokens.SecurityAlgorithms.RsaSha256);
@@ -149,28 +152,7 @@ public partial class ServiceIntegration : System.Web.UI.Page
         // Save current time + token expiration time to calculate whether we should provision a new token or use cached token
         Session["dsTokenExpire"] = dsTokenExpire;
 
-        // Optional code that can be used to find out DS accounts that can be used with the JWT. The base DS URL can also be derived using this call
-        //------------------------------------------------------------------------------------------------------------------------------------------------------
-        //var userInfo = new RestClient("https://account-d.docusign.com");
-        //var userRequest = new RestRequest("/oauth/userinfo", Method.GET);
-        //userRequest.AddHeader("content-type", "application/json");
-        //userRequest.AddHeader("Authorization", "Bearer " + dsToken);
-        //IRestResponse userResponse = userInfo.Execute(userRequest);
-
-        //JObject i = JObject.Parse(userResponse.Content);
-
-        //JToken accts = i.SelectToken("accounts");
-
-        //foreach (var x in accts)
-        //{
-        //    if (x.SelectToken("is_default") != null)
-        //    {
-        //        String dsAccountId = (string)x.SelectToken("account_id");
-        //        String dsBaseUrl = (string)x.SelectToken("base_uri");
-        //        dsBaseUrl = dsBaseUrl + "/restapi";
-        //    }
-        //}
-        //------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
 
         Session["dsJWT"] = dsToken;
         return dsToken;
@@ -301,6 +283,38 @@ public partial class ServiceIntegration : System.Web.UI.Page
         }
         binr.BaseStream.Seek(-1, System.IO.SeekOrigin.Current);     //last     ReadByte wasn't a removed zero, so back up a byte
         return count;
+    }
+
+    protected void loadAccounts()
+    {
+        // Optional code that can be used to find out DS accounts that can be used with the JWT. The base DS URL can also be derived using this call
+        //------------------------------------------------------------------------------------------------------------------------------------------------------
+        var userInfo = new RestClient("https://account-d.docusign.com");
+        var userRequest = new RestRequest("/oauth/userinfo", Method.GET);
+        userRequest.AddHeader("content-type", "application/json");
+        userRequest.AddHeader("Authorization", "Bearer " + createJWT());
+        IRestResponse userResponse = userInfo.Execute(userRequest);
+
+        JObject i = JObject.Parse(userResponse.Content);
+
+        JToken accts = i.SelectToken("accounts");
+
+        foreach (var x in accts)
+        {
+            if (x.SelectToken("is_default") != null)
+            {
+                String dsAccountId = (string)x.SelectToken("account_id");
+                String dsBaseUrl = (string)x.SelectToken("base_uri");
+                String dsAccountName = (string)x.SelectToken("account_name");
+ 
+                // Save the base service URL so it can be used in all API requests
+                Response.Cookies.Add(new System.Web.HttpCookie("dsBaseURL", dsBaseUrl));
+
+                // Load accounts into the accounts dropdown list
+                accounts.Items.Add(new ListItem(dsAccountName, dsAccountId));
+            }
+        }
+        //------------------------------------------------------------------------------------------------------------------------------------------------------
     }
 
     protected void uploadButton_Click(object sender, EventArgs e)
@@ -517,7 +531,7 @@ public partial class ServiceIntegration : System.Web.UI.Page
         string Boundary = "MY_BOUNDARY";
 
         // Set the URI
-        HttpWebRequest request = HttpWebRequest.Create(ConfigurationManager.AppSettings["DocuSignServer"] + "/restapi/v2/accounts/" + ConfigurationManager.AppSettings["API.AccountID"] + "/envelopes") as HttpWebRequest;
+        HttpWebRequest request = HttpWebRequest.Create(Request.Cookies.Get("dsBaseURL").Value + "/restapi/v2/accounts/" + accounts.Value + "/envelopes") as HttpWebRequest;
 
         // Set the method
         request.Method = "POST";
