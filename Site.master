@@ -54,7 +54,8 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="ServiceIntegration.aspx">Home</a></li>
-                        <li><a runat="server" href="~/About">Help</a></li>
+                        <li><a runat="server" href="#" onclick="window.open('help/DocuSignAuthenticationOverview.pdf'); return false;">Help</a></li>
+                        <li><a runat="server" href="https://github.com/magicparadigm/ServiceIntegration">Source Code</a></li>
                     </ul>
                     <asp:LoginView runat="server" Visible="false" ViewStateMode="Disabled">
                         <AnonymousTemplate>
