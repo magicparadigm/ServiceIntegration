@@ -4,7 +4,7 @@
 
             <div class="row">
                 <div class="col-xs-12 text-center">
-                    <img class="center-block" src="../images/homebkgrd-financial.jpg" style="height: 275px; width: 511px; margin-top: 70px" />
+                    <img class="center-block" src="images/homebkgrd-financial.jpg" style="height: 275px; width: 511px; margin-top: 70px" />
                     <br />
                     <h1>Transaction completed successfully</h1>
                 </div>
